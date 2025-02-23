@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return "YouTube MP3 Downloader API is running!"
 
 requests_list = []
 
