@@ -20,3 +20,7 @@ def get_links():
     if requests_list:
         return jsonify({"youtube_url": requests_list.pop(0)})
     return jsonify({"youtube_url": None})
+
+if __name__ == "__main__":
+    app.run(debug=False,
+host="0.0.0.0", port=10000)
