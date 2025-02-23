@@ -17,9 +17,3 @@ def get_links():
     if requests_list:
         return jsonify({"youtube_url": requests_list.pop(0)})
     return jsonify({"youtube_url": None})
-
-import os
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(debug=False, host="0.0.0.0", port=port)
